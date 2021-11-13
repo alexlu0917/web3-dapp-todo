@@ -4,6 +4,10 @@ import { useEthers, useEtherBalance } from "@usedapp/core";
 export default function ConnectButton() {
   const {activateBrowserWallet, account } = useEthers();
   const etherBalance = useEtherBalance(account);
+
+  const connectWallet = () => {
+      activateBrowserWallet();
+  }
 console.log('account',account);
 console.log('balance', etherBalance);
   return account ? (
@@ -13,6 +17,6 @@ console.log('balance', etherBalance);
       </Text>
     </Box>
   ) : (
-    <Button>Connect to a wallet</Button>
+    <Button onClick={connectWallet}>Connect to a wallet</Button>
   );
 }
