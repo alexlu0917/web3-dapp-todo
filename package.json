@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@metamask/jazzicon": "^2.0.0",
     "react-app-rewired": "^2.1.8",
     "web-vitals": "^2.1.2"
   }
